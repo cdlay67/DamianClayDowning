@@ -1,0 +1,24 @@
+{
+  "name": "DamianClayDowning",
+  "version": "1.0.0",
+  "description": "![](https://media.licdn.com/dms/image/C4E03AQGqxiwI5dzglw/profile-displayphoto-shrink_200_200/0?e=1546473600&v=beta&t=cfvp1eTIxJJ4xGx7Lhp1REqY-KoyWnvPGkg9l6BUcko)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdlay67/DamianProjects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdlay67/DamianProjects/issues"
+  },
+  "homepage": "https://github.com/cdlay67/DamianProjects#readme",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "parcel-bundler": "^1.10.3"
+  }
+}
