@@ -13,11 +13,12 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
+            animation: move linear 2000ms infinite;
         }
 
-        h2{
+        h2 {
             font-style: italic;
-            color: cyan;
+            color:lawngreen;
         }
 
         /* Style the header */
@@ -42,7 +43,7 @@
         /* Style the list inside the menu */
         nav li {
             size: 175px;
-            align-content: center;  
+            align-content: center;
 
         }
 
@@ -54,6 +55,7 @@
             height: 300px;
             /* only for demonstration, should be removed */
             align-content: center;
+
         }
 
         /* Clear floats after the columns */
@@ -120,8 +122,63 @@
             }
         }
 
-        .display{
+        .display {
             visibility: hidden;
+        }
+
+        .center {
+            text-align: center;
+            font-size: 28px;
+
+        }
+
+        .right {
+          text-align: right;
+            right: 16px;
+        }
+
+        .bg {
+            animation: slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-20deg, blue 50%, #000 50%);
+            bottom: 0;
+            left: -100%;
+            opacity: .5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 4s;
+        }
+
+        .bg3 {
+            animation-duration: 5s;
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, .8);
+            border-radius: .25em;
+            box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+            box-sizing: border-box;
+            left: 50%;
+            padding: 10vmin;
+            position: fixed;
+            text-align: center;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-25%);
+            }
+
+            100% {
+                transform: translateX(25%);
+            }
         }
     </style>
 </head>
@@ -129,9 +186,11 @@
 <body>
 
     <h2 class="display">CSS Layout Float</h2>
-    <p class="display">In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will
+    <p class="display">In this example, we have created a header, two columns/boxes and a footer. On smaller screens,
+        the columns will
         stack on top of each other.</p>
-    <p class="display">Resize the browser window to see the responsive effect (you will learn more about this in our next chapter -
+    <p class="display">Resize the browser window to see the responsive effect (you will learn more about this in our
+        next chapter -
         HTML Responsive.)</p>
 
     <header>
@@ -145,14 +204,21 @@
             </ul>
         </nav>
 
-        <article>
-            <h1>My name is Damian Clay-Downing</h1>
-            <p>This is my Web Resume Portfolio Project.</p>
-        </article>
+        <div class="center">
+            <article>
+                <h1>My name is Damian Clay-Downing</h1>
+                <p>This is my Web Resume Portfolio Project.</p>
+            </article>
+        </div>
+
     </section>
 
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
     <footer>
-        <p>Footer</p>
+        <p class="right"><a href="#resume">Click here <br> view Resume</a></p>
     </footer>
 
 
