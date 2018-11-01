@@ -6,25 +6,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Damian' Clay-Downing | Web Developer</title>
-    <link rel="stylesheet" type="text/css" href="index.css"> 
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2{
+            font-style: italic;
+            color: cyan;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+        nav li {
+            size: 175px;
+            align-content: center;  
+
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+            /* only for demonstration, should be removed */
+            align-content: center;
+        }
+
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .line-1 {
+            position: relative;
+            top: 50%;
+            width: 100px;
+            margin: auto;
+            border-right: 2px solid rgba(255, 255, 255, .75);
+            font-size: 180%;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(0%);
+        }
+
+        /* Animation */
+        .anim-typewriter {
+            animation: typewriter 4s steps(54) 1s 1 normal both,
+                blinkTextCursor 500ms steps(54) infinite normal;
+        }
+
+        @keyframes typewriter {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 6em;
+            }
+        }
+
+        @keyframes blinkTextCursor {
+            from {
+                border-right-color: rgba(255, 255, 255, .75);
+            }
+
+            to {
+                border-right-color: transparent;
+            }
+        }
+
+        .display{
+            visibility: hidden;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="grid-container">
-        <h1>Hello World! Welcome to my Savvy Coders Portfolio Project</h1>
-        <p>Hello my name is Damian Clay-Downing</p>
 
-        <img src="https://media.licdn.com/dms/image/C4E03AQGqxiwI5dzglw/profile-displayphoto-shrink_200_200/0?e=1546473600&v=beta&t=cfvp1eTIxJJ4xGx7Lhp1REqY-KoyWnvPGkg9l6BUcko"
-            alt="Profile">
-    </div>
+    <h2 class="display">CSS Layout Float</h2>
+    <p class="display">In this example, we have created a header, two columns/boxes and a footer. On smaller screens, the columns will
+        stack on top of each other.</p>
+    <p class="display">Resize the browser window to see the responsive effect (you will learn more about this in our next chapter -
+        HTML Responsive.)</p>
 
-    <h2>Contact Information</h2>
-    <ul>
-        <li><b>Email:</b> <i>dclaydowning@gmail.com</i></li>
-        <li><b>Cell:</b> <i>314-574-1092</i></li>
-        <li><b>Github:</b> <a href="https://github.com/cdlay67">Damian Clay-Downing</a></li>
-        <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/damian-clay-downing-8ba89155">Damian Clay-Downing</a></li>
-    </ul>
+    <header>
+        <h2 class="line-1 anim-typewriter">Hello World!</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><img src="https://ca.slack-edge.com/T09CULVUZ-UD8BM6KU4-6170513dfbc6-72" id="profile" /></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>My name is Damian Clay-Downing</h1>
+            <p>This is my Web Resume Portfolio Project.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
 
 </body>
 
