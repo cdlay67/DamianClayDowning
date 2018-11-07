@@ -1,0 +1,191 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    animation: move linear 2000ms infinite;
+}
+
+h2 {
+    font-style: italic;
+    color: rgb(254, 255, 254);
+    text-shadow: 1px 1px 2px black;
+}
+
+/* Style the header */
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    height: 300px;
+    /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav li {
+    size: 100%;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 82.6%;
+    background-color: #f1f1f1;
+    height: 300px;
+    
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-top: 20%;
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+img {
+margin-top: 20%;
+
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+
+    nav,
+    article {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.line-1 {
+    position: relative;
+    top: 50%;
+    width: 100px;
+    margin: auto;
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(0%);
+}
+
+/* Animation */
+.anim-typewriter {
+    animation: typewriter 4s steps(54) 1s 1 normal both,
+        blinkTextCursor 500ms steps(54) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 6em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.display {
+    visibility: hidden;
+}
+
+.center {
+    text-align: center;
+    font-size: 48px;
+}
+
+.right {
+    text-align: right;
+    right: 16px;
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-20deg, blue 50%, #000 50%);
+    bottom: 0;
+    left: -100%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: .25em;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 10vmin;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+
+#link-color {
+    color: cyan;
+}
+
+#section1 {
+    position: absolute;
+    top: 1050px;
+    height: 450px;
+    width: 50%;
+    left: 32%;
+
+}
