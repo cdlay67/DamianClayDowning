@@ -1,0 +1,66 @@
+body{
+    background-color: gold;
+}
+
+h1{
+    color: green;
+}
+
+ul {
+    background-color: blueviolet;
+    font-size: 24px;
+}
+
+#navigation > ul li {
+    background-color: red;
+}
+
+#navigation li {
+    color: aqua;
+}
+
+#navigationli:first-child{
+    color: hotpink;
+}
+
+#navigation li:last-child{
+color: rgb(42, 134, 209);
+}
+
+#navigation li:nth-child(2n){
+    color: magenta;
+}
+
+div.container {
+    background-color: blueviolet;
+}
+
+#header h1,
+#header h2 {
+    background-color: aqua;
+}
+
+.container {
+    margin: 0;
+    max-width: 900px;
+    width: 90%;
+}
+
+#navigation li:hover{
+    background-color: white;
+    text-align: center;
+}
+
+#navigation ul > li {
+    display: inline;
+    overflow: hidden;
+}
+
+#navigation .dropdown  {
+    display: none;
+}
+
+#navigation a:hover + .dropdown {
+    display: block;
+
+}
