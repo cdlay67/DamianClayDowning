@@ -51,7 +51,7 @@ footer>p a {
     color: #000;
 }
 
-#sectionId > a {
+#sectionId>a {
     color: #000;
 }
 
@@ -60,26 +60,52 @@ footer>p a {
     width: 1125px;
     margin: auto;
 }
+
 /*******************/
+
 #edu {
     display: block;
     width: 350px;
 }
 
-#edu > ul > li {
+#edu>ul>li {
     display: inline;
     font-size: 24px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
+    line-height: 1.6;
+    padding-left: 30px;
 }
 
 #edu .dropdown {
     display: none;
 }
 
-#edu a:hover + .dropdown {
-    display: block;
+#edu a:hover+.dropdown {
+    display: table;
 }
+
+/*******************/
+
+#ex {
+    display: block;
+    width: 350px;
+}
+
+#ex>ul>li {
+    display: inline;
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#ex .dropdown {
+    position: relative;
+    display: none;
+}
+
+#ex a:hover+.dropdown {
+    display: table;
+}
+
 /*******************/
 
 #hob {
@@ -87,40 +113,35 @@ footer>p a {
     width: 350px;
 }
 
-#ex {
-    display: block;
-    width: 350px;
-}
-
-/*******************/
-#pro2 {
-    display: block;
-    width: 350px;
-}
-
-#pro2 > ul > li {
+#hob>ul>li {
     display: inline;
     font-size: 24px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    line-height: 1.6;
 }
 
-#pro2 .dropdown {
+#hob .dropdown {
+    position: relative;
     display: none;
 }
 
-#pro2 a:hover + .dropdown {
-    display: block;
+#hob a:hover+.dropdown {
+    display: table;
 }
-/*******************/
-
 
 /*******************/
+
+/*******************/
+
 #pro {
     display: block;
     width: 350px;
 }
 
-#pro > ul > li {
+#pro>ul>li {
     display: inline;
     font-size: 24px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -130,9 +151,20 @@ footer>p a {
     display: none;
 }
 
-#pro a:hover + .dropdown {
-    display: block;
+#pro a:hover+.dropdown {
+    display: table;
 }
+
+#img1 li .bottom-left {
+    position: absolute;
+    padding-left: 50px;
+}
+
+#img2 .bottom-right {
+    position: absolute;
+    margin-left: 20px;
+}
+
 /*******************/
 
 #skill {
@@ -140,27 +172,52 @@ footer>p a {
     width: 350px;
 }
 
-.container {
-    position: fixed;
-
+#skill>ul>li {
+    display: inline;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.6;
+    padding-left: 50px;
+    font-weight: bold; 
 }
 
-#proId{
+#skill .dropdown {
+    display: none;
+}
+
+#skill a:hover+.dropdown {
+    display: table;
+}
+
+/*******************/
+
+.container {
+    position: fixed;
+}
+
+/*******************/
+
+#proId {
     width: 1115px;
     color: black;
 }
 
-#proId > ul > li {
+#proId>ul>li {
     display: inline;
     font-size: 24px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    font-weight: bold;
 }
 
 #proId .dropdown {
     display: none;
 }
 
-#proId a:hover + .dropdown {
+/*******************/
+
+#proId a:hover+.dropdown {
     display: block;
 }
 
@@ -180,9 +237,11 @@ footer>p a {
     box-shadow: 2px 2px 5px black;
 }
 
+.grid-container>div a {
+    color: #000;
+}
 
 /**********************/
-
 
 /* Create two columns/boxes that floats next to each other */
 
