@@ -1,4 +1,4 @@
-export default `
+export default`
 <div id="footer">
         <h3>Contact Information</h3>
 
@@ -20,5 +20,5 @@ export default `
         </ul>
 
     </div>
-
+    
 `;
