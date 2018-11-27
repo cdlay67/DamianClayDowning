@@ -1,4 +1,5 @@
 var userName = prompt('What is your name?');
+var title = document.querySelector('h1');
 
 var greet = function greet() {
 
@@ -9,6 +10,8 @@ var greet = function greet() {
     }
     else {
         alert('Hello' + ' ' + userName);
+
+        title.textContent = 'Hello World' + userName;
     }
 };
 
