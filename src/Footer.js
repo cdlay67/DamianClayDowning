@@ -1,4 +1,5 @@
-export default`
+export default function Footer() {
+    return  `
 <div id="footer">
         <h3>Contact Information</h3>
 
@@ -22,3 +23,4 @@ export default`
     </div>
     
 `;
+}
