@@ -6,31 +6,46 @@ import greet from './src/Greeting';
 
 var State = {
     'active': 'home',
-    
-    'home': {'title': 'Hello Bloggggggg!!!!'},
-    
-    'Blog': {'title': 'Read my blog'},
-    
-    'Contact': {'title': 'any questions or concenrs'},
-    
-    'Projects': {'title': 'what do you want to know'},
 
-    'Events': {'title': 'what do you want to know'}
+    'home': {
+        'title': 'Hello Bloggggggg!!!!',
+        'links': ['Blog', 'Contact', 'Projects']
+    },
+
+    'Blog': {
+        'title': 'Read my blog',
+        'links': ['Home', 'Contact', 'Projects']
+    },
+
+    'Contact': {
+        'title': 'any questions or concenrs',
+        'links': ['Home', 'Blog', 'Projects']
+    },
+
+    'Projects': {
+        'title': 'what do you want to know',
+        'links': ['Home', 'Blog', 'Contact']
+    },
+
+    'Events': {
+        'title': 'what do you want to know',
+        'links': ['Home', 'Contact', 'Projects']
+    }
 };
 
 var root = document.querySelector('#root');
 
-function handleNavigation(event){
+function handleNavigation(event) {
     event.preventDefault();
-    
-State.active = event.target.textContent;
+
+    State.active = event.target.textContent;
 
     render(State);//eslint disable line
 }
 
 
-function render(state){
-var links;
+function render(state) {
+    var links;
 
     root.innerHTML = `
         ${Navigation(state)}
@@ -39,16 +54,14 @@ var links;
         ${Footer(state)}
 `;
 
-greet();
+    greet();
 
-links = document.querySelectorAll('#navigation a');
+    links = document.querySelectorAll('#navigation a');
 
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', handleNavigation);
 
-links[0].addEventListener('click', handleNavigation);
-
-links[1].addEventListener('click', handleNavigation);
-
-links[2].addEventListener('click', handleNavigation);
+    }
 }
 
 render(State);
