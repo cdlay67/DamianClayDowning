@@ -3,11 +3,16 @@ import Navigation from './src/Navigation';
 import Content from './src/Content';
 import Footer from './src/Footer';
 import greet from './src/Greeting';
+import Navigo from 'navigo';
+import { capitalize } from 'lodash';
+
+
+var router = new Navigo(window.location.origin);
 
 var State = {
-    'active': 'home',
+    'active': 'Home',
 
-    'home': {
+    'Home': {
         'title': 'Hello Bloggggggg!!!!',
         'links': ['Blog', 'Contact', 'Projects']
     },
@@ -35,10 +40,9 @@ var State = {
 
 var root = document.querySelector('#root');
 
-function handleNavigation(event) {
-    event.preventDefault();
+function handleNavigation(params) {
 
-    State.active = event.target.textContent;
+    State.active = capitalize(params.page);
 
     render(State);//eslint disable line
 }
@@ -56,12 +60,10 @@ function render(state) {
 
     greet();
 
-    links = document.querySelectorAll('#navigation a');
-
-    for (let i = 0; i < links.length; i++) {
-        links[i].addEventListener('click', handleNavigation);
-
-    }
+    router.updatePageLinks();
 }
 
-render(State);
+router
+    .on('/:page', handleNavigation)
+    .on('/', () => handleNavigation({'page': 'Home'}))
+    .resolve();

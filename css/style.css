@@ -76,7 +76,7 @@ a{
         grid-template-columns: auto;
         grid-template-areas: "navigation header" "navigation content" "navigation footer";
     }
-}body {
+}#root {
     margin: 0;
     background-color: rgb(18, 59, 105);
     display: grid;
