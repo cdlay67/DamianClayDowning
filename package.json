@@ -22,6 +22,8 @@
     "parcel-bundler": "^1.10.3"
   },
   "dependencies": {
+    "lit": "^1.0.1",
+    "lit-html": "^0.14.0",
     "lo": "^0.33.0",
     "lodash": "^4.17.11",
     "navigo": "^7.1.2"
